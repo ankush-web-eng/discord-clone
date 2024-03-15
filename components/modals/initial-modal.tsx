@@ -26,7 +26,7 @@ import {
 
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-// import FileUpload from '../file-upload';
+import FileUpload from '@/components/file-upload';
 import { useRouter } from 'next/navigation';
 
 interface initialModalProps {}
@@ -128,7 +128,7 @@ const InitialModal: FC<initialModalProps> = ({}) => {
                             />
                         </div>
                         <DialogFooter className="bg-gray-100 px-6 py-4">
-                            <Button variant="default" disabled={isLoading}>
+                            <Button variant="primary" disabled={isLoading}>
                                 Create
                             </Button>
                         </DialogFooter>

@@ -29,7 +29,7 @@ import { Button } from '@/components/ui/button';
 import FileUpload from '@/components/file-upload';
 import { useRouter } from 'next/navigation';
 
-interface initialModalProps {}
+interface initialModalProps { }
 const formSchema = z.object({
     name: z.string().min(1, {
         message: 'Server name is required.',
@@ -39,7 +39,7 @@ const formSchema = z.object({
     }),
 });
 
-const InitialModal: FC<initialModalProps> = ({}) => {
+const InitialModal: FC<initialModalProps> = ({ }) => {
     const [isMounted, setIsMounted] = useState(false);
 
     const router = useRouter();
@@ -64,7 +64,9 @@ const InitialModal: FC<initialModalProps> = ({}) => {
             router.refresh();
             window.location.reload();
             form.reset();
-        } catch (error) {}
+        } catch (error) { }
+        // console.log(values);
+        
     };
 
     if (!isMounted) return null;

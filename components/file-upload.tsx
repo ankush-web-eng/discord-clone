@@ -15,6 +15,7 @@ interface fileUploadProps {
 
 const FileUpload: FC<fileUploadProps> = ({ onChange, value, endpoint }) => {
   const fileType = value?.split('.').pop();
+  // console.log(fileType)
 
   if (value && fileType !== 'pdf') {
     return (
